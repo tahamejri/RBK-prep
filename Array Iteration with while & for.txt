@@ -1,0 +1,115 @@
+//4 :
+function remove(arr, arg){
+    var newArr =[];
+    for(var i =0; i<arr.length; i++){
+        if(arr[i]!==arg){
+            newArr.push(arr[i]) ;
+        }
+    }
+    return newArr ;
+}
+//while 
+function remove(arr, arg){
+    var newArr =[];
+    var cnt = 0 ;
+    while(cnt<arr.length){
+        if(arr[cnt]!==arg){
+            newArr.push(arr[cnt]) ;
+            cnt++ ;
+        }else{
+     cnt ++ ;
+        }
+    }
+    return newArr ;
+}
+
+//5 :
+function even(arr){
+    var newArr = [] ;
+    for (var i=0; i<arr.length; i++){
+        if(arr[i]%2===0){
+            newArr.push(arr[i]) ;
+        }
+    }
+    return newArr ;
+}
+
+//while iteration
+function even(arr){
+    var newArr = [] ;
+    var count = 0 ;
+    while (count<arr.length){
+        if(arr[count].length % 2 === 0){
+            newArr.push(arr[count]) ;
+            count++ ;
+        }
+        else{
+            count++ ;
+        }
+    }
+    return newArr ;
+}
+
+// more practice 1 :
+ function shortest(arr){
+     min ='';
+     var minLength=arr[0].length ;
+     for(var i=0; i<arr.length; i++){
+        if(minlength>arr[i].length){
+            min = arr[i] ;
+            minlength = arr[i].length ;
+        }
+     }
+     return min ;
+ }
+
+ //while etiration
+ function shortest(arr){
+    var minLength=arr[0].length ;
+    var min = arr[0];
+    var cnt = 0 ;
+    while(cnt<arr.length){
+       if(minLength>arr[cnt].length){
+           min = arr[cnt] ;
+           minLength = arr[cnt].length
+           cnt++ ;
+       }
+       else{
+           cnt++ ;
+       }
+    }
+    return min ;
+}
+
+
+
+ // advanced 1 
+ function reverse(str){
+     var arr = str.split('');
+     var arr2 = [] ;
+     for(var i =arr.length-1; i>0; i--){
+        arr2.push(arr[i]) ;
+     }
+     return arr2.join('') ;
+ }
+
+ //while iteration
+
+ function reverse(str){
+    var arr = str.split('');
+    var arr2 = [] ;
+    var cnt = str.length-1 ;
+    while(cnt>=0){
+       arr2.push(arr[cnt]) ;
+       cnt-- ;
+    }
+    return arr2.join('') ;
+}
+
+
+
+ //advanced 2 
+
+function keep(arr, func){
+    return func(arr) ;
+}
