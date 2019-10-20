@@ -1,0 +1,110 @@
+function sum (n){
+    var cnt = 0;
+    var result = 0 ;
+    while(cnt<=n){
+        result+=cnt ;
+        cnt++ ;
+    }
+    return result
+}
+
+function factorial(n){
+    var cnt = 1 ;
+    result = 1 ;
+    while(cnt<=n){
+        result *= cnt ;
+    }
+    return result ;
+}
+
+function repeatString(str, n){
+    var cnt = 0 ;
+    var outStr ='' ;
+    while(cnt<n){
+        outStr+=str ;
+        cnt ++ ;
+    }
+    return outStr ;
+}
+
+
+function fencepost (n){
+    var out = [];
+    var cnt = 1 ;
+    while(cnt<=n){
+        out.push(cnt) ;
+        cnt++;
+
+    }
+    return out.join() ;
+}
+
+function meetAndGreet(n){
+    var cnt = 1 ;
+    var out = '' ;
+    var out1 ='';
+    var out2 ='' ;
+    while(cnt <= n){
+        if(cnt < 3){
+        out1 ='welcome ' + cnt +',' ;
+        out2 +=' , meet' + (cnt-1) ; 
+        console.log(out1 + out2) ;
+        cnt ++ ;
+        }
+
+    }
+}
+
+function rest(array){
+    return array.slice(1) ;
+}
+
+
+function butlast(array){
+    return array.slice(0,array.length-1)
+}
+
+function cons(array, elem){
+    array.unshift(elem)
+    return array ;
+}
+
+function conj(array, elem){
+    array.push(elem) ;
+    return array ;
+}
+
+function first(arr){
+    return arr[0] ;
+}
+
+
+function sum2(arr){
+    if(arr.length===0){
+        return 0 ;
+    }
+    return first(array) + sum(rest(array)) ;
+}
+
+
+function squared(arr){
+    var out=[] ;
+    if(arr.length===0){
+        return 1 ;
+    }
+    return cons(squared(rest(array)), first(arr)*first(arr))
+}
+
+
+function justEven(arr){  
+    var out =[] ;
+    var cnt =0 ;
+    while(cnt <=arr.length-1){
+        if(arr[cnt]%2 === 0){
+            conj(out,arr[cnt]) ;
+            cnt++ ;
+        }
+        cnt++ ;
+    }
+    return out ;
+}

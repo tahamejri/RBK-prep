@@ -1,0 +1,60 @@
+// More practice -- 1
+
+function exponentials(numbers) { 
+    var v = numbers.map(function(x){
+            return Math.pow(x,x)
+        })
+return v ;
+} 
+
+//more practice -- 2
+
+function reverse(str){
+  var outStr = '' ;
+    for (var i = str.length-1; i>=0; i--){
+        outStr+=str[i];
+    }
+    return outStr ;
+} 
+
+function stringReverse(str){
+    var arr= str.split(" ") ;
+    var outArr = arr.map(reverse) ;
+    return outArr.join(' ') ;
+}
+
+//more practice -- 3 
+
+function pluck(obj,key){
+    var x = obj.map(function(x,k){
+        for (var i in x ){
+		if(i===key)
+            return x[i];
+        }
+
+    })
+return x ;
+}
+
+//
+function parseCSV(str){
+    var obj = {} ;
+    var arr = str.split('/');
+    arr.map(function(element){
+        var arre=element.split(',');
+        if(arr.length===3){
+            obj[name][first] = arre[0] ;
+            obj[name][last] = arr[1] ;
+            obj[age] = arr[2] ;
+
+        }
+        else{
+            obj.name[first] = arre[0] ;
+            obj.name[middle] = arre[1] ;
+            obj.name[last] = arre[2] ;
+            obj.age = arr[3] ;
+
+        }
+    })
+    return obj ;
+}
